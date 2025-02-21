@@ -6,6 +6,10 @@
 #
 #---------------------------------------------------------------------------------------
 # Desenvolvido e personalizado por Raimundo Junior
+#
+# sudo git  clone https://github.com/pretorivm/zabbix_grafana.git
+# sudo chmod +x Zabbix-MySQL-Install.sh
+# sudo ./Zabbix-MySQL-Install.sh
 #---------------------------------------------------------------------------------------
 
 clear
