@@ -82,7 +82,7 @@ echo "Parabéns, seu Zabbix instalado com sucesso !"
 echo    "########============================================########"
 echo    "######## URL de acesso : http://$inet_value/        ########"
 echo    "######## Usuário Zabbix: Admin                      ########"
-echo    "######## Senha		    : zabbix                 ########"
+echo    "######## Senha: zabbix                              ########"
 echo    "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo    "######## Note: Não esqueça de mudar a senha depois  ########"
 echo    "########============================================########"
@@ -94,5 +94,18 @@ echo "Preparando o ambiente para instalar o Grafana"
 sudo apt-get install -y adduser libfontconfig1 musl
 sudo wget https://dl.grafana.com/oss/release/grafana_11.5.2_amd64.deb
 sudo dpkg -i grafana_11.5.2_amd64.deb
+
+echo "Parabéns, seu Grafana foi instalado com sucesso !"
+#==     show access url ==#
+echo    "########============================================########"
+echo    "######## URL de acesso : http://$inet_value:3000    ########"
+echo    "######## Usuário Grafana: admin                     ########"
+echo    "######## Senha: admin                               ########"
+echo    "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+echo    "######## Note: Não esqueça de mudar a senha depois  ########"
+echo    "########============================================########"
+
+sleep 10
+
 sudo systemctl start grafana-server
 sudo systemctl enable grafana-server	
