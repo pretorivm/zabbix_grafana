@@ -40,6 +40,12 @@ echo "#--------------------------------------------------------#"
 echo         "Importando os dados para o Banco de dados"
 echo "#--------------------------------------------------------#"
 sudo zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -uzabbix -pzabbix zabbix
+
+echo "#--------------------------------------------------------#"
+echo     "Importando os dados para o Banco de dados +- 35sec"
+echo "#--------------------------------------------------------#"
+sleep 35
+
 sudo sed -i 's/^# DBPassword=/DBPassword=zabbix/' /etc/zabbix/zabbix_server.conf
 #
 echo "#------------------------------------------------------------#"
